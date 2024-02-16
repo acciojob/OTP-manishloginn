@@ -1,58 +1,50 @@
-/* Write your CSS here */
+ 
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap");
  
 * {
+  margin: 0;
+  padding: 0;
   box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
 }
  
 body {
+  padding: 10px;
+}
+ 
+#verification_heading,
+#verification_subtext {
   display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
-  font-family: Arial, sans-serif;
+  padding: 10px;
+  font-weight: 500;
 }
  
-.grid-container {
-  display: grid;
-  grid-template-columns: repeat(3, 150px);
-  grid-template-rows: repeat(3, 150px);
-  grid-gap: 1px;
+#verification_subtext {
+  font-weight: 400;
+  font-size: medium;
+  color: rgb(67, 67, 67);
 }
  
-.grid-item {
-  border: 1px solid black;
+.code-container {
   display: flex;
-  align-items: center;
   justify-content: center;
-  font-size: 1.5em;
-  background-color: transparent;
+  align-items: center;
+  gap: 10px;
+  margin-top: 20px;
 }
  
-input {
-  margin: 10px;
-  padding: 5px 10px;
+.code {
+  width: 10%;
+  height: 10%;
+  padding: 20px 10px;
   text-align: center;
-  border: 1px solid black;
-  border-radius: 5px;
-}
- 
-button {
-  padding: 5px 10px;
-  margin: 10px;
-  border: 1px solid black;
-  border-radius: 5px;
-  font-size: 1em;
-  cursor: pointer;
-}
- 
-button:hover {
-  transform: scale(1.1);
-}
- 
-#buttons-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  border: 1px solid rgba(211, 211, 211, 0.548);
+  border-radius: 2px;
+  border-top: none;
+  font-size: 3rem;
+  font-weight: medium;
 }
  
  

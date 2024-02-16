@@ -1,20 +1,21 @@
-document.querySelector("#change_button").addEventListener("click", () => {
-  const blockInput = document.querySelector("#block_id").value;
-  const colorInput = document.querySelector("#colour_id").value;
  
-  document
-    .querySelectorAll(".grid-item")
-    .forEach((e) => (e.style.backgroundColor = "transparent"));
+const inputs = document.querySelectorAll(".code");
  
-  const selectedGrid = document.getElementById(blockInput);
-  if (selectedGrid) {
-    selectedGrid.style.backgroundColor = colorInput;
-    selectedGrid.style.transition = "all 0.5s ease-in-out";
-  }
+document.addEventListener("DOMContentLoaded", (e) => {
+  inputs[0].focus();
 });
  
-document.querySelector("#reset_button").addEventListener("click", () => {
-  document
-    .querySelectorAll(".grid-item")
-    .forEach((e) => (e.style.backgroundColor = "transparent"));
+inputs.forEach((input, index) => {
+  input.addEventListener("input", (event) => {
+    /^\d+$/.test(event.target.value) &&
+      index < inputs.length - 1 &&
+      inputs[index + 1].focus();
+  });
+ 
+  input.addEventListener("keydown", (event) => {
+    event.key === "Backspace" &&
+      event.target.value == "" &&
+      index > 0 &&
+      inputs[index - 1].focus();
+  });
 });
