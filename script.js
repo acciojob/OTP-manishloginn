@@ -1,4 +1,4 @@
- 
+
 const inputs = document.querySelectorAll(".code");
  
 document.addEventListener("DOMContentLoaded", (e) => {
